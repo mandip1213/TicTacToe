@@ -1,0 +1,301 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+     :root {
+        --gradient: linear-gradient( 45deg, #926e7a, #cf9dc9, #bcdfb2);
+        --board: linear-gradient( violet, rgb(238, 82, 238), rgb(241, 30, 241));
+        --myvar: 49.1vw;
+    }
+    
+    html {
+        height: 100%;
+        /* background: green; */
+        background-image: var(--gradient);
+        background-size: 200%;
+        animation: background-animation 10s infinite alternate;
+    }
+    
+    @keyframes background-animation {
+        0% {
+            background-position: left
+        }
+        100% {
+            background-position: right
+        }
+    }
+    
+    @keyframes board-animation {
+        0% {
+            background-position: left
+        }
+        100% {
+            background-position: right
+        }
+    }
+    
+    .container {
+        text-align: center;
+        position: relative;
+    }
+    
+    .home {
+        position: absolute;
+        top: -7vh;
+        cursor: pointer;
+        right: var(--myvar);
+    }
+    
+    .welcome-screen,
+    .circle-cross,
+    .welcome-screen-2,
+    .playing-board-container,
+    .two-player-circle-cross {
+        background-color: cadetblue;
+        margin: 25vh auto;
+        border: 2px solid green;
+        width: 25rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .welcome-screen-2 {
+        width: fit-content;
+        display: none;
+    }
+    
+    .whose-turn {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .turn-turn {
+        padding: 0.5rem 0.8rem;
+        font-size: 2rem;
+        display: flex;
+        width: fit-content
+    }
+    
+    #your-turn {
+        background-color: rgb(168, 116, 216);
+        color: white;
+        width: 15rem;
+        box-sizing: border-box;
+        margin-top: 0.06rem;
+    }
+    
+    #computer-turn,
+    #player-2-turn {
+        background-color: white;
+        color: rgb(168, 116, 216);
+        width: 15rem;
+        box-sizing: border-box;
+    }
+    
+    #player-2-turn {
+        display: none
+    }
+    
+    .playing-board-container {
+        padding: 1rem;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    .ask-opponent {
+        margin-top: 2rem;
+    }
+    
+    .play-with {
+        font-size: 2rem;
+    }
+    
+    .enter-name {
+        text-align: center;
+    }
+    
+    .welcome-text {
+        margin: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .hello-alexa {
+        padding: 15px;
+        padding-top: 10px;
+        border: 2px solid darkslategray;
+        border-radius: 10px;
+        background-color: rgb(212, 195, 159);
+    }
+    
+    span.alexa,
+    span#greetings {
+        font-size: 2rem;
+        color: blueviolet;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    
+    input {
+        display: block;
+        margin: 0 auto;
+        padding: 0.25rem 1rem;
+        outline: transparent;
+        width: 50%;
+        border: 2px solid green;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+    
+    input:focus {
+        box-shadow: 0 0 0.5rem 0 rgb(12, 61, 63);
+    }
+    
+    .btn {
+        position: relative;
+        top: 3px;
+        padding: 2px 1rem;
+        font-size: 2rem;
+        border: 2px solid forestgreen;
+        border-radius: 10px;
+        color: green;
+        cursor: pointer;
+        transition-duration: 250ms;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn:hover {
+        position: relative;
+        top: 0;
+        background-color: green;
+        color: black;
+        padding: 5px 1rem;
+    }
+    
+    button {
+        background-color: inherit;
+        margin: 1rem auto 5px;
+    }
+    
+    #restart-button,
+    #restart-two-player-button {
+        margin-top: 1rem
+    }
+    /* css for playing board */
+    
+    .playing-board {
+        width: 15rem;
+        box-sizing: border-box;
+        height: 15rem;
+        display: flex;
+        flex-wrap: wrap;
+        outline: transparent;
+        margin: auto;
+        background-image: var(--board);
+        background-size: 200%;
+        animation: board-animation 5s infinite alternate;
+    }
+    
+    .playing-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        outline: 2px solid black;
+    }
+    
+    .circle {
+        width: 3rem;
+        height: 3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 1);
+    }
+    
+    .cross {
+        width: 3rem;
+        height: 3rem;
+        color: rgba(0, 0, 0, 1);
+    }
+    
+    .material-icons {
+        font-size: 3rem;
+    }
+    
+    .display-winner {
+        background-color: cadetblue;
+        margin: 25vh auto;
+        border: 2px solid green;
+        width: 25rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    div.welcome-screen-2 {
+        display: none
+    }
+    
+    div.circle-cross {
+        display: none;
+    }
+    
+    div.playing-board-container {
+        display: none
+    }
+    
+    .display-winner {
+        display: none;
+    }
+    
+    .display-winner span {
+        /* padding-top: 5rem; */
+    }
+    
+    .display-winner div.btn {
+        margin-top: 2rem;
+    }
+    
+    .two-player-circle-cross {
+        display: none;
+    }
+    
+    #restart-two-player-button {
+        display: none
+    }
+    
+    .player-1,
+    .player-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fix-width {
+        width: 10rem;
+    }
+    
+    #player-1,
+    #player-2 {
+        margin-right: 1rem
+    }
+    
+    #player-2-turn .circle,
+    #player-2-turn .cross,
+    #your-turn .circle,
+    #your-turn .cross,
+    #computer-turn .circle,
+    #computer-turn .cross {
+        margin-left: 1rem;
+    }

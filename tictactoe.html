@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tictactoe</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+
+<body>
+
+    <!-- welcomescreen1 starts here -->
+    <div class="container">
+        <span class="material-icons home" onclick="location.reload()">
+            home
+            </span>
+        <div class="welcome-screen ">
+            <div class="welcome-text hello-alexa">Hello,its me, <span class="alexa">Alexa </span> !!!
+                <div> I am here to guide you</div>
+            </div>
+
+            <div class="welcome-text enter-name">
+                <label for="name" style="font-size:1.5rem">What's your name? </label>
+                <input type="text" id="username" name="name" placeholder="Your Name " autocomplete="off">
+            </div>
+            <div class="btn" id="start-button">Start</div>
+        </div>
+        <!-- welcomescreen1 ends  here -->
+
+        <!-- welcomescreen-2 starts here -->
+
+        <div class="welcome-screen-2 ">
+            <div class="welcome-text hello-alexa">Hi, <span class="alexa" id="welcome-screen-2-username"></span> !!!
+                <div>Lets Start The Game!</div>
+            </div>
+
+            <div class="ask-opponent">
+                <div>
+                    <div class="play-with">Play with?</div>
+                    <button class="btn" id="two-player">Two player</button>
+                    <button class="btn" id="play-with-computer">Computer</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- asks to play cross or circle  when played vs computer-->
+        <div class="circle-cross">
+            <div class="welcome-text hello-alexa">Hi, <span class="alexa" id="circle-cross-username"></span> !!! </div>
+            <div class="circle-cross-item">
+                <div class="play-with" style="font-size: 3rem;">Play As:</div>
+                <button class="btn play-circle-cross" playas="play-as-circle">
+                    <div class="circle" id="circle-" playas="play-as-circle"></div>
+                </button>
+                <button class="btn play-circle-cross" playas="play-as-cross">
+                    <div class="cross " playas="play-as-circle"><span playas="play-as-cross" class="material-icons">
+                            clear
+                        </span></div>
+
+                </button>
+            </div>
+        </div>
+
+        <!-- playing with Computer -->
+
+
+        <div class="playing-board-container">
+
+
+            <div class="computers-turn turn-turn" id="computer-turn">Computer</div>
+            <div class="player-2-turn turn-turn" id="player-2-turn">Player2</div>
+
+
+            <div class="playing-board">
+                <div class="playing-block" id="block-0"></div>
+                <div class="playing-block" id="block-1"></div>
+                <div class="playing-block" id="block-2"></div>
+                <div class="playing-block" id="block-3"></div>
+                <div class="playing-block" id="block-4"></div>
+                <div class="playing-block" id="block-5"></div>
+                <div class="playing-block" id="block-6"></div>
+                <div class="playing-block" id="block-7"></div>
+                <div class="playing-block" id="block-8"></div>
+            </div>
+            <div class="players-turn turn-turn" id="your-turn">your turn</div>
+        </div>
+
+        <div class="display-winner">
+            <div class="welcome-text hello-alexa"> <span id="greetings">
+                </span><span class="alexa" id="congrats_sorry_user"></span>
+            </div>
+            <div id="message" style="font-size: 3rem;"></div>
+            <div class="btn" onclick="restartgame()" id="restart-button">Restart</div>
+            <div class="btn" onclick="two_player()" id="restart-two-player-button">Start</div>
+
+        </div>
+        <div class="two-player-circle-cross">
+            <div class="welcome-text fix-width hello-alexa player-1" style="display:flex"><span id="player-1">
+            </span></div>
+            <div class="welcome-text fix-width hello-alexa player-2"></div>
+            <div class="btn fix-width" onclick="two_player_playing()" id="start-two-player-button">Start</div>
+
+        </div>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+
+
+
+</html>
